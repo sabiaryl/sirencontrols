@@ -33,35 +33,6 @@ function checkForSilentSirens()
     end
 end
 
---[[ checkForSilentSirens() {
-    for (let index = 0; index < 64; index++) {
-        if (NetworkIsPlayerActive(index)) {
-            const playerVeh = GetVehiclePedIsUsing(GetPlayerPed(index));
-            if (playerVeh) {
-                if (IsVehicleSirenOn(playerVeh)) {
-                    DisableVehicleImpactExplosionActivation(playerVeh, this.IsSirenMuted(playerVeh));
-                    if (this.IsBlipSirenMuted(playerVeh)) BlipSiren(playerVeh);
-                } else if (DecorGetBool(playerVeh, "Invisible")) {
-                    if (!IsEntityVisible(playerVeh)) SetEntityVisible(playerVeh, true, true);
-                    SetEntityAlpha(playerVeh, 0);
-                }
-            }
-        }
-    }
-}
- ]]
-
-
-
-
-
-
-
-
-
-
-
-
 
 Citizen.CreateThread(function()
     while true do 
